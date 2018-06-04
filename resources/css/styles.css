@@ -20,6 +20,12 @@ a {
   width: 1200px;
   margin: 0 auto; }
 
+.pt-80 {
+  padding-top: 80px; }
+
+.pb-80 {
+  padding-bottom: 80px; }
+
 .nav {
   background-color: #fff;
   padding-top: 20px;
@@ -109,7 +115,7 @@ a {
         line-height: 1.4;
         padding-left: 100px;
         padding-right: 100px;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
         color: #e2e2e3; }
       .header .row .wrapper-header .header-btn {
         text-align: center; }
@@ -121,7 +127,8 @@ a {
           border: 2px solid;
           -webkit-box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
           -moz-box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3); }
+          box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
+          display: inline-block; }
         .header .row .wrapper-header .header-btn a.transparent-btn {
           background-color: transparent;
           border-color: #fff;
@@ -145,3 +152,23 @@ a {
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease; }
+
+.section-wrapper {
+  text-align: center;
+  padding: 0 100px; }
+  .section-wrapper h2 {
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 15px; }
+  .section-wrapper p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #8f989f; }
+  .section-wrapper hr {
+    width: 50px;
+    background: #1fb5f6;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 40px; }
