@@ -1,0 +1,147 @@
+/* Varibles */
+/* Reset  CSS */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none; }
+
+body {
+  color: #333;
+  font-family: 'Roboto', 'Serif'; }
+
+a {
+  text-decoration: none; }
+
+.container-fluid {
+  padding: 0 60px; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.nav {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  width: calc(100% - 120px); }
+  .nav .nav-logo {
+    text-align: left;
+    width: 150px;
+    display: inline-block;
+    padding-right: 50px; }
+    .nav .nav-logo .nav-brand {
+      text-decoration: none;
+      font-size: 36px;
+      font-weight: 700;
+      color: #333;
+      letter-spacing: 4px; }
+      .nav .nav-logo .nav-brand span {
+        color: #fe3a2f; }
+  .nav .nav-menu {
+    text-align: right;
+    width: calc(100% - 205px);
+    display: inline-block; }
+    .nav .nav-menu li {
+      display: inline-block;
+      padding-right: 25px;
+      text-transform: capitalize; }
+      .nav .nav-menu li:nth-last-child(1) {
+        margin-right: 0; }
+      .nav .nav-menu li a {
+        color: #333;
+        font-size: 20px;
+        line-height: 1.2; }
+        .nav .nav-menu li a:hover, .nav .nav-menu li a:active, .nav .nav-menu li a:focus {
+          border-bottom: 2px solid #fe3a2f;
+          color: #fe3a2f;
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease; }
+    .nav .nav-menu li.active a {
+      border-bottom: 2px solid #fe3a2f;
+      color: #fe3a2f;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease; }
+    .nav .nav-menu li.btn-sign-up {
+      border: 2px solid #fe3a2f;
+      border-radius: 25px;
+      padding: 10px 20px; }
+      .nav .nav-menu li.btn-sign-up a {
+        border-bottom: none; }
+      .nav .nav-menu li.btn-sign-up:hover, .nav .nav-menu li.btn-sign-up:active, .nav .nav-menu li.btn-sign-up:focus {
+        background-color: #fe3a2f;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease; }
+        .nav .nav-menu li.btn-sign-up:hover a, .nav .nav-menu li.btn-sign-up:active a, .nav .nav-menu li.btn-sign-up:focus a {
+          color: #fff;
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease; }
+
+.header {
+  background-color: #707374;
+  height: 100vh; }
+  .header .row {
+    display: table;
+    width: 100%;
+    height: 100vh; }
+    .header .row .wrapper-header {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #fff; }
+      .header .row .wrapper-header h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.5;
+        padding-bottom: 15px; }
+      .header .row .wrapper-header p {
+        font-size: 26px;
+        line-height: 1.4;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+        color: #e2e2e3; }
+      .header .row .wrapper-header .header-btn {
+        text-align: center; }
+        .header .row .wrapper-header .header-btn a {
+          border-radius: 5px;
+          font-size: 26px;
+          line-height: 1.2;
+          color: #fff;
+          border: 2px solid;
+          -webkit-box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3); }
+        .header .row .wrapper-header .header-btn a.transparent-btn {
+          background-color: transparent;
+          border-color: #fff;
+          margin-right: 15px;
+          padding: 20px 70px; }
+          .header .row .wrapper-header .header-btn a.transparent-btn:hover, .header .row .wrapper-header .header-btn a.transparent-btn:focus, .header .row .wrapper-header .header-btn a.transparent-btn:active {
+            background-color: #fe3a2f;
+            border-color: #fe3a2f;
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease; }
+        .header .row .wrapper-header .header-btn a.main-btn {
+          background-color: #1fb5f6;
+          border-color: #1fb5f6;
+          padding: 20px 48px; }
+          .header .row .wrapper-header .header-btn a.main-btn:hover, .header .row .wrapper-header .header-btn a.main-btn:focus, .header .row .wrapper-header .header-btn a.main-btn:active {
+            background-color: #fe3a2f;
+            border-color: #fe3a2f;
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease; }
