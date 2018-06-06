@@ -27,6 +27,13 @@ p{
   color: $text-color;
   font-size: 18px;
   line-height: 1.5;
+  @media screen and (min-width: 768px ) and (max-width: 1200px){
+    font-size: 16px;
+  }
+}
+
+textarea {
+  font-family: 'Roboto', serif;
 }
 
 h1 {
@@ -60,12 +67,39 @@ h6{
 }
 
 .container-fluid{
-  padding: 0 60px;
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  .container-fluid{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 .pt-80{
@@ -80,6 +114,12 @@ h6{
   padding-bottom: 150px;
 }
 
+@media screen and (min-width: 768px ) and (max-width: 1200px){
+  .pb-80.pb-tb-40{
+    padding-bottom: 40px;
+  }
+}
+
 //Nav menu
 .nav {
   background-color: #fff;
@@ -91,6 +131,10 @@ h6{
   -moz-box-shadow: 0px 10px 35px -15px rgba(0,0,0,0.35);
   box-shadow: 0px 10px 35px -15px rgba(0,0,0,0.35);
   z-index: 100;
+
+  @media screen and (min-width: 768px ) and (max-width: 1200px){
+    width: calc(100% - 30px);
+  }
 
   .nav-logo {
     text-align: left;
@@ -183,11 +227,18 @@ h6{
 .header{
   background-color: #707374;
   height: 100vh;
+  
+  @media screen and (min-width: 768px ) and (max-width: 1200px){
+    height: 70vh;
+  }
 
   .row{
     display:table;
     width: 100%;
     height: 100vh;
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+      height: 70vh;
+    }
 
     .wrapper-header{
       display: table-cell;
@@ -206,11 +257,16 @@ h6{
 
       p{
         font-size: 18px;
-        line-height: 1.4;
+        line-height: 1.5;
         padding-left:180px;
         padding-right:180px;
         padding-bottom: 30px;
         color: #e2e2e3;
+        
+        @media screen and (min-width: 768px ) and (max-width: 1200px){
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
 
       .header-btn{
@@ -268,6 +324,10 @@ h6{
   text-align: center;
   padding: 0 180px;
 
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+      padding: 0;
+    }
+
   h2{
     font-size: 48px;
     line-height: 1.5;
@@ -276,9 +336,13 @@ h6{
     padding-bottom: 15px;
   }
   p{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     color: #8f989f;
+
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+      font-size: 16px;
+    }
   }
   hr {
     width: 50px;
@@ -298,23 +362,56 @@ h6{
     width: 55%;
     display: inline-block;
 
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+      width: calc(100% - 30px);
+    }
+
     img{
       width: 100%;
       height: auto;
+
+      @media screen and (min-width: 768px ) and (max-width: 1200px){
+        width: calc(100% + 30px);
+      }
     }
   }
   .col-block{
     width: 45%;
     display: inline-block;
     vertical-align: top;
+
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+      width: calc(100% - 30px);
+    }
+
     .icon-block{
       display: block;
       padding: 50px 70px;
+
+      @media screen and (min-width: 768px ) and (max-width: 1200px){
+        padding: 100px 0;
+        margin: 0 -15px;
+      }
       .item-block{
         padding-bottom: 25px;
 
+        @media screen and (min-width: 768px ) and (max-width: 1200px){
+          width: calc(50% - 50px);
+          display: inline-block;
+          padding: 0 15px 50px 15px;
+
+          &:nth-last-child(-n+1) {
+            width: 100%;
+          }
+        }
+
         .block-header{
           padding-bottom: 15px;
+          
+          @media screen and (min-width: 768px ) and (max-width: 1200px){
+            padding-left: 15px;
+            padding-right: 15px;
+          }
   
           span{
             color: $second-color;
@@ -330,6 +427,12 @@ h6{
             display: inline-block;
             font-weight: normal;
             width: calc(100% - 50px);
+          }
+        }
+        .block-main{
+          @media screen and (min-width: 768px ) and (max-width: 1200px){
+            padding-left: 15px;
+            padding-right: 15px;
           }
         }
       }
@@ -348,10 +451,15 @@ h6{
     .item-wrapper{
       width: 25%;
       display: inline-block;
+
+      @media screen and (min-width: 768px ) and (max-width: 1200px){
+        width: 50%;
+      }
       
       .items{
         padding-left: 15px;
         padding-right: 15px;
+        padding-bottom: 50px;
 
         .item-pricing{
           border: 1px solid #fff;
@@ -442,6 +550,11 @@ h6{
   .content-section-2{
     width: 50%;
     margin: 0 auto;
+
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+      width: 100%;
+    }
+
     span a{
       color: $primary-color;
     }
@@ -458,11 +571,26 @@ h6{
     .item-wrapper{
       width: 33.333333%;
       display: inline-block;
+
+      @media screen and (min-width: 768px ) and (max-width: 1200px){
+        width: calc(50% - 50px);
+        display: inline-block;
+        padding: 0 15px 50px 15px;
+
+        &:nth-last-child(-n+2) {
+          width: calc(100% - 30px);
+        }
+      }
   
       .item-block{
         padding-right: 15px;
         padding-left: 15px;
         margin-bottom: 50px;
+
+        @media screen and (min-width: 768px ) and (max-width: 1200px){
+          padding-left: 0;
+          padding-right: 0;
+        }
   
         .icon-item{
           display: inline-block;
@@ -531,11 +659,26 @@ h6{
       width: 33.33333%;
       display: inline-block;
 
+      @media screen and (min-width: 768px ) and (max-width: 1200px){
+        width: calc(50% - 30px);
+        display: inline-block;
+        padding: 0 15px 50px 15px;
+
+        &:nth-last-child(-n+1) {
+          width: calc(100% - 30px);
+        }
+      }
+
       .team-item{
         margin-left: 15px;
         margin-right: 15px;
         margin-bottom: 50px;
         position: relative;
+
+        @media screen and (min-width: 768px ) and (max-width: 1200px){
+          margin-left: 0;
+          margin-right: 0;
+        }
 
         .avatar-container{
           position: absolute;
@@ -636,6 +779,15 @@ h6{
       width: calc(33.333333% - 30px);
       display: inline-block;
       vertical-align: top;
+      padding-bottom: 25px;
+
+      @media screen and (min-width: 768px ) and (max-width: 1200px){
+        width: calc(50% - 30px);
+
+        &:nth-last-child(-n+1) {
+          width: calc(100% - 30px);
+        }
+      }
 
       .block-item{
         padding-bottom: 60px;
@@ -683,118 +835,126 @@ h6{
 
           a{
             color: $second-color;
+
+            &:hover,&:focus,&:active{
+              color: $primary-color;
+              transition: all 0.3s ease;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -o-transition: all 0.3s ease;
+            }
           }
         }
+        
+        form{
+          ::-webkit-input-placeholder{
+            color: #a2abb6;
+          }
+          :-ms-input-placeholder{
+            color: #a2abb6;
+          }
+          ::-moz-placeholder{
+            color: #a2abb6;
+          }
+          .form-block{
+            display: block;
+            width: calc(100% - 40px);
+            padding: 10px 20px;
+            border-radius: 3px;
+            color: #a2abb6;
+            font-size: 16px;
+            background-color: #475a70;
+            margin-bottom: 15px;
 
-        .footer-form{
-          form{
-            ::-webkit-input-placeholder{
-              color: #a2abb6;
+            @media screen and (min-width: 768px ) and (max-width: 1200px){
+              width: calc(100% - 40px);
             }
-            :-ms-input-placeholder{
-              color: #a2abb6;
-            }
-            ::-moz-placeholder{
-              color: #a2abb6;
-            }
-            .form-block{
-              display: block;
-              width: 100%;
-              padding: 10px 15px;
-              border-radius: 3px;
-              color: #a2abb6;
-              font-size: 16px;
-              background-color: #475a70;
-              margin-bottom: 15px;
-            }
-            .gt{
-              margin-bottom: 15px;
-              display: inline-block;
+          }
+          .gt{
+            margin-bottom: 15px;
+            display: inline-block;
 
-              input{
-                margin-right: 15px;
-                border: 2px solid red;
-              }
-
-              label{
-                color: #a2abb6;
-                padding-right: 15px;
-              }
-
-              [type="radio"]:checked,
-              [type="radio"]:not(:checked) {
-                  position: absolute;
-                  left: -9999px;
-              }
-              [type="radio"]:checked + label,
-              [type="radio"]:not(:checked) + label
-              {
-                  position: relative;
-                  padding-left: 28px;
-                  cursor: pointer;
-                  line-height: 20px;
-                  display: inline-block;
-                  color: #a2abb6;
-              }
-              [type="radio"]:checked + label:before,
-              [type="radio"]:not(:checked) + label:before {
-                  content: '';
-                  position: absolute;
-                  left: 0;
-                  top: 0;
-                  width: 18px;
-                  height: 18px;
-                  border: 1px solid #fff;
-                  border-radius: 100%;
-                  background: transparent;
-              }
-              [type="radio"]:checked + label:after,
-              [type="radio"]:not(:checked) + label:after {
-                  content: '\2714';
-                  width: 12px;
-                  height: 12px;
-                  position: absolute;
-                  left: 4px;
-                  border-radius: 100%;
-                  -webkit-transition: all 0.2s ease;
-                  transition: all 0.2s ease;
-                  color: $second-color;
-              }
-              [type="radio"]:not(:checked) + label:after {
-                  opacity: 0;
-                  -webkit-transform: scale(0);
-                  transform: scale(0);
-              }
-              [type="radio"]:checked + label:after {
-                  opacity: 1;
-                  -webkit-transform: scale(1);
-                  transform: scale(1);
-              }
-              
-            }
             label{
-              font-size: 16px;
+              color: #a2abb6;
+              padding-right: 15px;
             }
-            .submit-form{
-              width: auto;
-              background-color: $primary-color;
-              border-color: $primary-color;
-              padding: 10px 18px;
-              color: #fff;
-              cursor: pointer;
-              border-radius: 3px;
-              text-transform: uppercase;
-              font-size: 12px;
-              font-weight: 700;
-    
-              &:hover,&:focus,&:active{
-                background-color: $second-color;
-                border-color: $second-color;
-                transition: all 0.3s ease;
-                -webkit-transition: all 0.3s ease;
-                -moz-transition: all 0.3s ease;
-                -o-transition: all 0.3s ease;
-              }
+
+            [type="radio"]:checked,
+            [type="radio"]:not(:checked) {
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                opacity: 0;
+                z-index: 1;
+                cursor: pointer;
+            }
+            [type="radio"]:checked + label,
+            [type="radio"]:not(:checked) + label
+            {
+                position: relative;
+                padding-left: 28px;
+                line-height: 20px;
+                display: inline-block;
+                color: #a2abb6;
+            }
+            [type="radio"]:checked + label:before,
+            [type="radio"]:not(:checked) + label:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 18px;
+                height: 18px;
+                border: 1px solid #fff;
+                border-radius: 100%;
+                background: transparent;
+            }
+            [type="radio"]:checked + label:after,
+            [type="radio"]:not(:checked) + label:after {
+                content: '\2714';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                left: 4px;
+                border-radius: 100%;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+                color: $second-color;
+            }
+            [type="radio"]:not(:checked) + label:after {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            [type="radio"]:checked + label:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            
+          }
+          label{
+            font-size: 16px;
+          }
+          .submit-form{
+            width: auto;
+            background-color: $primary-color;
+            border-color: $primary-color;
+            padding: 10px 18px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+  
+            &:hover,&:focus,&:active{
+              background-color: $second-color;
+              border-color: $second-color;
+              transition: all 0.3s ease;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -o-transition: all 0.3s ease;
             }
           }
         }
