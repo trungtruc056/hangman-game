@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no">
     <title>RWD - Responsive Web Design Assignment</title>
     <link rel="stylesheet" href="./resources/css/styles.css">
     <link rel="stylesheet" href="./resources/fonts//icomoon/icomoon.ttf">
@@ -10,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 </head>
 <body>
-    <header class="header">
-        <nav>
+    <header class="header" role="navigation">
+        <nav class="menu-desktop">
             <div class="nav container-fluid">
                 <div class="nav-logo">
                     <a class = "nav-brand" href="#"><span>R</span>WD</a>
@@ -26,6 +27,29 @@
                 </ul>
             </div>
         </nav>
+
+        <nav class="menu-mobile" role="navigation">
+            <div class="container">
+                <div class="block-top-menu">
+                        <div class="nav-logo">
+                            <a class = "nav-brand" href="#"><span>R</span>WD</a> 
+                            </div>
+                            <div class="icon-menu-mobile" id="icon-menu-mobile"><span class="icon-menu"></span></div>
+                </div>
+                
+                <div class="item-menu" id = "collapse-menu">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li class="btn-sign-up"><a href="#">Sign up free</a></li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+
         <div class="container">
             <div class="row">
                 <div class="wrapper-header">
@@ -420,5 +444,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('icon-menu-mobile').addEventListener('click',function(){
+            var item = document.getElementById('collapse-menu');
+            item.classList.toggle('collapse-menu');
+        });
+        
+    </script>
+
 </body>
 </html>

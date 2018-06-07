@@ -1,4 +1,4 @@
-/* Varibles */
+/* Import reference file scss */
 /* Reset  CSS */
 * {
   padding: 0;
@@ -67,15 +67,15 @@ h6 {
 
 @media (min-width: 768px) {
   .container {
-    width: 750px; } }
+    max-width: 750px; } }
 
 @media (min-width: 992px) {
   .container {
-    width: 970px; } }
+    max-width: 970px; } }
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px; } }
+    max-width: 1170px; } }
 
 .pt-80 {
   padding-top: 80px; }
@@ -89,6 +89,24 @@ h6 {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .pb-80.pb-tb-40 {
     padding-bottom: 40px; } }
+
+/* Directory CSS 
+
+  1. Navigation
+  |--- 1.1. Navigation PC
+  |--- 1.2. Navigation Mobile
+  2. Header
+  3. Section 1
+  |--- 3.1. Section 1-2
+  4. Section 2
+  5. Section 3
+  6. Section 4
+  7. Footer
+
+*/
+@media (min-width: 768px) {
+  nav.menu-mobile {
+    display: none !important; } }
 
 .nav {
   background-color: #fff;
@@ -134,19 +152,21 @@ h6 {
         .nav .nav-menu li a:hover, .nav .nav-menu li a:active, .nav .nav-menu li a:focus {
           border-bottom: 2px solid #fe3a2f;
           color: #fe3a2f;
-          transition: all 0.3s ease;
           -webkit-transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease; }
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
     .nav .nav-menu li.active a {
       border-bottom: 2px solid #fe3a2f;
       color: #fe3a2f;
-      transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease; }
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
     .nav .nav-menu li.btn-sign-up {
       border: 2px solid #fe3a2f;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
       border-radius: 25px;
       padding: 5px 10px; }
       .nav .nav-menu li.btn-sign-up a {
@@ -154,16 +174,106 @@ h6 {
         text-transform: none; }
       .nav .nav-menu li.btn-sign-up:hover, .nav .nav-menu li.btn-sign-up:active, .nav .nav-menu li.btn-sign-up:focus {
         background-color: #fe3a2f;
-        transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease; }
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
         .nav .nav-menu li.btn-sign-up:hover a, .nav .nav-menu li.btn-sign-up:active a, .nav .nav-menu li.btn-sign-up:focus a {
           color: #fff;
-          transition: all 0.3s ease;
           -webkit-transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
-          -o-transition: all 0.3s ease; }
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+
+@media (max-width: 767px) {
+  nav.menu-desktop {
+    display: none; } }
+
+nav.menu-mobile {
+  background: #fff;
+  display: inline-block;
+  width: 100%; }
+  nav.menu-mobile .block-top-menu {
+    position: relative;
+    z-index: 100; }
+  nav.menu-mobile .nav-logo {
+    text-align: left;
+    width: 150px;
+    display: inline-block;
+    padding-right: 50px;
+    padding: 15px 0; }
+    nav.menu-mobile .nav-logo .nav-brand {
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: 700;
+      color: #333;
+      letter-spacing: 4px; }
+      nav.menu-mobile .nav-logo .nav-brand span {
+        color: #fe3a2f; }
+  nav.menu-mobile .icon-menu-mobile {
+    padding: 20px 0;
+    display: inline-block;
+    float: right; }
+    nav.menu-mobile .icon-menu-mobile span {
+      cursor: pointer;
+      font-weight: bold; }
+  nav.menu-mobile .item-menu {
+    padding-bottom: 30px;
+    position: absolute;
+    background-color: #fff;
+    left: -100%;
+    z-index: 101;
+    width: calc(100% - 30px);
+    padding: 0 15px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    nav.menu-mobile .item-menu.collapse-menu {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      left: 0; }
+    nav.menu-mobile .item-menu ul {
+      padding-top: 15px;
+      padding-bottom: 30px; }
+      nav.menu-mobile .item-menu ul li {
+        padding: 8px 0;
+        font-size: 18px;
+        text-transform: capitalize;
+        list-style-type: none; }
+        nav.menu-mobile .item-menu ul li a {
+          color: #333; }
+      nav.menu-mobile .item-menu ul li.active a {
+        color: #fe3a2f; }
+        nav.menu-mobile .item-menu ul li.active a:hover, nav.menu-mobile .item-menu ul li.active a:active, nav.menu-mobile .item-menu ul li.active a:focus {
+          color: #fe3a2f; }
+      nav.menu-mobile .item-menu ul li.btn-sign-up {
+        border: 2px solid #fe3a2f;
+        border-radius: 25px;
+        padding: 5px 10px;
+        display: inline-block;
+        width: auto; }
+        nav.menu-mobile .item-menu ul li.btn-sign-up a {
+          border-bottom: none;
+          text-transform: none; }
+        nav.menu-mobile .item-menu ul li.btn-sign-up:hover, nav.menu-mobile .item-menu ul li.btn-sign-up:active, nav.menu-mobile .item-menu ul li.btn-sign-up:focus {
+          background-color: #fe3a2f;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+          nav.menu-mobile .item-menu ul li.btn-sign-up:hover a, nav.menu-mobile .item-menu ul li.btn-sign-up:active a, nav.menu-mobile .item-menu ul li.btn-sign-up:focus a {
+            color: #fff;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
+
+@media (max-width: 767px) {
+  .item-menu.collapse-menu {
+    display: block; } }
 
 .header {
   background-color: #707374;
@@ -171,6 +281,9 @@ h6 {
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     .header {
       height: 70vh; } }
+  @media (max-width: 767px) {
+    .header {
+      height: 100vh; } }
   .header .row {
     display: table;
     width: 100%;
@@ -178,6 +291,9 @@ h6 {
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       .header .row {
         height: 70vh; } }
+    @media (max-width: 767px) {
+      .header .row {
+        height: 100vh; } }
     .header .row .wrapper-header {
       display: table-cell;
       vertical-align: middle;
@@ -189,6 +305,10 @@ h6 {
         font-size: 48px;
         line-height: 1.5;
         padding-bottom: 15px; }
+        @media (max-width: 767px) {
+          .header .row .wrapper-header h1 {
+            font-size: 36px;
+            line-height: 1.4; } }
       .header .row .wrapper-header p {
         font-size: 18px;
         line-height: 1.5;
@@ -196,7 +316,7 @@ h6 {
         padding-right: 180px;
         padding-bottom: 30px;
         color: #e2e2e3; }
-        @media screen and (min-width: 768px) and (max-width: 1200px) {
+        @media (max-width: 1200px) {
           .header .row .wrapper-header p {
             padding-left: 0;
             padding-right: 0; } }
@@ -215,31 +335,39 @@ h6 {
         .header .row .wrapper-header .header-btn a.transparent-btn {
           background-color: transparent;
           border-color: #fff;
+          padding: 15px 80px;
           margin-right: 15px;
-          padding: 15px 80px; }
+          margin-left: 15px;
+          margin-bottom: 25px; }
           .header .row .wrapper-header .header-btn a.transparent-btn:hover, .header .row .wrapper-header .header-btn a.transparent-btn:focus, .header .row .wrapper-header .header-btn a.transparent-btn:active {
             background-color: #fe3a2f;
             border-color: #fe3a2f;
-            transition: all 0.3s ease;
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease; }
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
         .header .row .wrapper-header .header-btn a.main-btn {
           background-color: #1fb5f6;
           border-color: #1fb5f6;
-          padding: 15px 58px; }
+          padding: 15px 58px;
+          margin-right: 15px;
+          margin-left: 15px;
+          margin-bottom: 25px; }
+          @media (max-width: 767px) {
+            .header .row .wrapper-header .header-btn a.main-btn {
+              padding: 15px 64px; } }
           .header .row .wrapper-header .header-btn a.main-btn:hover, .header .row .wrapper-header .header-btn a.main-btn:focus, .header .row .wrapper-header .header-btn a.main-btn:active {
             background-color: #fe3a2f;
             border-color: #fe3a2f;
-            transition: all 0.3s ease;
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease; }
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
 
 .section-wrapper {
   text-align: center;
   padding: 0 180px; }
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media (max-width: 1200px) {
     .section-wrapper {
       padding: 0; } }
   .section-wrapper h2 {
@@ -248,6 +376,10 @@ h6 {
     font-weight: normal;
     text-transform: capitalize;
     padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .section-wrapper h2 {
+        font-size: 26px;
+        line-height: 1.4; } }
   .section-wrapper p {
     font-size: 18px;
     line-height: 1.5;
@@ -272,6 +404,9 @@ h6 {
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       .section-1-2 .col-img {
         width: calc(100% - 30px); } }
+    @media (max-width: 767px) {
+      .section-1-2 .col-img {
+        width: 100%; } }
     .section-1-2 .col-img img {
       width: 100%;
       height: auto; }
@@ -285,6 +420,9 @@ h6 {
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       .section-1-2 .col-block {
         width: calc(100% - 30px); } }
+    @media (max-width: 767px) {
+      .section-1-2 .col-block {
+        width: 100%; } }
     .section-1-2 .col-block .icon-block {
       display: block;
       padding: 50px 70px; }
@@ -292,6 +430,9 @@ h6 {
         .section-1-2 .col-block .icon-block {
           padding: 100px 0;
           margin: 0 -15px; } }
+      @media (max-width: 767px) {
+        .section-1-2 .col-block .icon-block {
+          padding: 50px 0; } }
       .section-1-2 .col-block .icon-block .item-block {
         padding-bottom: 25px; }
         @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -301,6 +442,9 @@ h6 {
             padding: 0 15px 50px 15px; }
             .section-1-2 .col-block .icon-block .item-block:nth-last-child(-n+1) {
               width: 100%; } }
+        @media (max-width: 767px) {
+          .section-1-2 .col-block .icon-block .item-block {
+            width: 100%; } }
         .section-1-2 .col-block .icon-block .item-block .block-header {
           padding-bottom: 15px; }
           @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -335,6 +479,9 @@ h6 {
       @media screen and (min-width: 768px) and (max-width: 1200px) {
         .section-2 .pricing-box .item-wrapper {
           width: 50%; } }
+      @media (max-width: 767px) {
+        .section-2 .pricing-box .item-wrapper {
+          width: 100%; } }
       .section-2 .pricing-box .item-wrapper .items {
         padding-left: 15px;
         padding-right: 15px;
@@ -395,17 +542,17 @@ h6 {
               .section-2 .pricing-box .item-wrapper .items .item-pricing .button-buy a:hover, .section-2 .pricing-box .item-wrapper .items .item-pricing .button-buy a:focus, .section-2 .pricing-box .item-wrapper .items .item-pricing .button-buy a:active {
                 background-color: #fe3a2f;
                 border-color: #fe3a2f;
-                transition: all 0.3s ease;
                 -webkit-transition: all 0.3s ease;
                 -moz-transition: all 0.3s ease;
-                -o-transition: all 0.3s ease; }
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease; }
             .section-2 .pricing-box .item-wrapper .items .item-pricing .button-buy a.active {
               background-color: #fe3a2f;
               border-color: #fe3a2f; }
   .section-2 .content-section-2 {
     width: 50%;
     margin: 0 auto; }
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media (max-width: 1200px) {
       .section-2 .content-section-2 {
         width: 100%; } }
     .section-2 .content-section-2 span a {
@@ -424,6 +571,9 @@ h6 {
         padding: 0 15px 50px 15px; }
         .section-3 .icon-block-2 .item-wrapper:nth-last-child(-n+2) {
           width: calc(100% - 30px); } }
+    @media (max-width: 767px) {
+      .section-3 .icon-block-2 .item-wrapper {
+        width: 100%; } }
     .section-3 .icon-block-2 .item-wrapper .item-block {
       padding-right: 15px;
       padding-left: 15px;
@@ -469,10 +619,10 @@ h6 {
     .section-3 .button-s3 a:hover, .section-3 .button-s3 a:focus, .section-3 .button-s3 a:active {
       background-color: #fe3a2f;
       border-color: #fe3a2f;
-      transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease; }
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
 
 .section-4 {
   background: #f1faff; }
@@ -489,6 +639,9 @@ h6 {
           padding: 0 15px 50px 15px; }
           .section-4 .team-block .team-wrapper:nth-last-child(-n+1) {
             width: calc(100% - 30px); } }
+      @media (max-width: 767px) {
+        .section-4 .team-block .team-wrapper {
+          width: 100%; } }
       .section-4 .team-block .team-wrapper .team-item {
         margin-left: 15px;
         margin-right: 15px;
@@ -501,6 +654,9 @@ h6 {
         .section-4 .team-block .team-wrapper .team-item .avatar-container {
           position: absolute;
           left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           z-index: 1; }
           .section-4 .team-block .team-wrapper .team-item .avatar-container .avatar-block {
@@ -516,10 +672,10 @@ h6 {
               position: absolute;
               top: 50%;
               left: 50%;
-              transform: translate(-50%, -50%);
               -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
               -o-transform: translate(-50%, -50%);
-              -moz-transform: translate(-50%, -50%); }
+              transform: translate(-50%, -50%); }
               .section-4 .team-block .team-wrapper .team-item .avatar-container .avatar-block .team-avatar img {
                 border-radius: 50%;
                 width: 100%; }
@@ -551,10 +707,10 @@ h6 {
               color: #333; }
               .section-4 .team-block .team-wrapper .team-item .team-body .footer-team ul li a:hover, .section-4 .team-block .team-wrapper .team-item .team-body .footer-team ul li a:focus, .section-4 .team-block .team-wrapper .team-item .team-body .footer-team ul li a:active {
                 color: #fe3a2f;
-                transition: all 0.3s ease;
                 -webkit-transition: all 0.3s ease;
                 -moz-transition: all 0.3s ease;
-                -o-transition: all 0.3s ease; }
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease; }
 
 .footer {
   background-color: #3f5267; }
@@ -573,6 +729,9 @@ h6 {
           width: calc(50% - 30px); }
           .footer .footer-wrapper .footer-item:nth-last-child(-n+1) {
             width: calc(100% - 30px); } }
+      @media (max-width: 767px) {
+        .footer .footer-wrapper .footer-item {
+          width: calc(100% - 30px); } }
       .footer .footer-wrapper .footer-item .block-item {
         padding-bottom: 60px; }
         .footer .footer-wrapper .footer-item .block-item h4 {
@@ -582,7 +741,8 @@ h6 {
           width: 50px;
           background: #1fb5f6;
           height: 2px;
-          margin: 20px 0px 35px 0px; }
+          margin: 20px 0px 35px 0px;
+          text-align: left; }
         .footer .footer-wrapper .footer-item .block-item p {
           color: #73879d;
           padding-bottom: 10px;
@@ -612,10 +772,10 @@ h6 {
             color: #1fb5f6; }
             .footer .footer-wrapper .footer-item .block-item ul.social li a:hover, .footer .footer-wrapper .footer-item .block-item ul.social li a:focus, .footer .footer-wrapper .footer-item .block-item ul.social li a:active {
               color: #fe3a2f;
-              transition: all 0.3s ease;
               -webkit-transition: all 0.3s ease;
               -moz-transition: all 0.3s ease;
-              -o-transition: all 0.3s ease; }
+              -o-transition: all 0.3s ease;
+              transition: all 0.3s ease; }
         .footer .footer-wrapper .footer-item .block-item form ::-webkit-input-placeholder {
           color: #a2abb6; }
         .footer .footer-wrapper .footer-item .block-item form :-ms-input-placeholder {
@@ -632,6 +792,9 @@ h6 {
           background-color: #475a70;
           margin-bottom: 15px; }
           @media screen and (min-width: 768px) and (max-width: 1200px) {
+            .footer .footer-wrapper .footer-item .block-item form .form-block {
+              width: calc(100% - 40px); } }
+          @media (max-width: 767px) {
             .footer .footer-wrapper .footer-item .block-item form .form-block {
               width: calc(100% - 40px); } }
         .footer .footer-wrapper .footer-item .block-item form .gt {
@@ -701,7 +864,7 @@ h6 {
           .footer .footer-wrapper .footer-item .block-item form .submit-form:hover, .footer .footer-wrapper .footer-item .block-item form .submit-form:focus, .footer .footer-wrapper .footer-item .block-item form .submit-form:active {
             background-color: #1fb5f6;
             border-color: #1fb5f6;
-            transition: all 0.3s ease;
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease; }
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
