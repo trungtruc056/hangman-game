@@ -45,6 +45,10 @@ nav.menu-mobile{
     width: 150px;
     display: inline-block;
     padding-right: 50px;
+    
+    @media (max-width: 1190px) {
+      padding-right: 25px;
+    }
 
     .nav-brand{
       text-decoration: none;
@@ -62,6 +66,10 @@ nav.menu-mobile{
     text-align: right;
     width: calc(100% - 205px);
     display: inline-block;
+
+    @media (max-width: 1190px){
+      width: calc(100% - 185px);
+    }
 
     li {
       display: inline-block;

@@ -126,6 +126,9 @@ h6 {
     width: 150px;
     display: inline-block;
     padding-right: 50px; }
+    @media (max-width: 1190px) {
+      .nav .nav-logo {
+        padding-right: 25px; } }
     .nav .nav-logo .nav-brand {
       text-decoration: none;
       font-size: 36px;
@@ -138,6 +141,9 @@ h6 {
     text-align: right;
     width: calc(100% - 205px);
     display: inline-block; }
+    @media (max-width: 1190px) {
+      .nav .nav-menu {
+        width: calc(100% - 185px); } }
     .nav .nav-menu li {
       display: inline-block;
       padding-right: 25px;
