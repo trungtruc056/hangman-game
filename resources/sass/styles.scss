@@ -134,6 +134,9 @@ nav.menu-mobile{
   background:#fff;
   display: inline-block;
   width: 100%;
+  position: fixed;
+  @include box-shadow(0px 10px 35px -15px rgba(0,0,0,0.35));
+
   .block-top-menu {
     position: relative;
     z-index: 100;
