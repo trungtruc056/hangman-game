@@ -16,6 +16,7 @@
   5. Section 3
   6. Section 4
   7. Footer
+  8. Button Scroll to Top
 
 */
 
@@ -136,6 +137,7 @@ nav.menu-mobile{
   width: 100%;
   position: fixed;
   @include box-shadow(0px 10px 35px -15px rgba(0,0,0,0.35));
+  z-index: 999;
 
   .block-top-menu {
     position: relative;
@@ -1011,4 +1013,48 @@ nav.menu-mobile{
       }
     }
   }
+}
+
+//scroll to top
+.btn-to-top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  a{
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 99;
+    text-decoration: none;
+    @include transition(all 0.3s ease);
+  
+    border: 2px solid $primary-color;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    text-align: center;
+
+    &:hover{
+      background-color: $primary-color;
+      @include transition(all 0.3s ease);
+    }
+
+    li{
+      color: $primary-color;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: inherit;
+      position: relative;
+      z-index: 10;
+      list-style-type: none;
+
+      &:hover{
+        color: #fff;
+        @include transition(all 0.3s ease);
+      }
+    }
+  }
+  
 }

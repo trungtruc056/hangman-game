@@ -445,12 +445,32 @@
         </div>
     </footer>
 
+    <!-- button to top -->
+    <div class="btn-to-top" id = "btnToTop">
+            <a href="#top">
+                <li class="icon-arrow-up"></li>
+            </a>
+        </div>
+
     <script>
         document.getElementById('icon-menu-mobile').addEventListener('click',function(){
             var item = document.getElementById('collapse-menu');
             item.classList.toggle('collapse-menu');
         });
-        
+
+        //scroll to top
+        var btntoTop = document.getElementById('btnToTop');
+
+        btntoTop.addEventListener("click", function() {
+        var i = 10;
+        var int = setInterval(function() {
+            window.scrollTo(0, i);
+            i += 10;
+            if (i >= 200) clearInterval(int);
+        }, 20);
+        });
+
+
     </script>
 
 </body>
